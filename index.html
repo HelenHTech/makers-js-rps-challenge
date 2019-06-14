@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="src/rps.js"></script>
+<script src="src/jquery.js"></script>
+
+</head>
+<body>
+<div class="container-fluid" align="center" style="padding:50px;">
+<header>
+<h1>Rock Paper Scissors</h1>
+</header>
+<br>
+Player 1    <input type="text" id="player1"><p></p>
+Player 2    <input type="text" id="player2"><p></p>
+
+<div class="col">
+    Player 1<p></p>
+    <button><img type="image" id="player1_choice" class="player1_choice" src="rock1.png" height="100" width="100"></button>
+    <button><img type="button" id="player1_choice" class="player1_choice" src="paper1.png" height="100" width="100"></button>
+    <button><img type="button" id="player1_choice" class="player1_choice" src="scissors1.png" height="100" width="100"></button>
+    </div>
+  <p></p>
+<div class="col">
+    Player 2<p></p>
+    <button><img type="image" id="player2_choice" class="player2_choice" src="rock2.png" height="100" width="100"></button>
+    <button><img type="button" id="player2_choice" class="player2_choice" src="paper2.png" height="100" width="100"></button>
+    <button><img type="button" id="player2_choice" class="player2_choice" src="scissors2.png" height="100" width="100"></button>
+    </div>
+    <p></p>
+    <br>
+    Score<p></p>
+    <span id="user_score_1">0</span>:<span id="user_score_2">0</span>
+
+<!-- <div class="register">
+  Player 1:<input type="text" id="player1" class="registered-players"><br>
+  Player 2:<input type="text" id="player2" class="registered-players"><br>
+<div class="scoring">
+</div> -->
+
+</div>
+</body>
+</html>
