@@ -16,32 +16,30 @@
 <h1>Rock Paper Scissors</h1>
 </header>
 <br>
-Player 1    <input type="text" id="player1"><p></p>
-Player 2    <input type="text" id="player2"><p></p>
+Player 1    <input type="text" id="newplayer1"><p></p>
+Player 2    <input type="text" id="newplayer2"><p></p>
+<input type="submit" value="Register"><p></p>
 
 <div class="col">
-    Player 1<p></p>
-    <button><img type="image" id="player1_choice" class="player1_choice" src="rock1.png" height="100" width="100"></button>
-    <button><img type="button" id="player1_choice" class="player1_choice" src="paper1.png" height="100" width="100"></button>
-    <button><img type="button" id="player1_choice" class="player1_choice" src="scissors1.png" height="100" width="100"></button>
+    <div onload="document.innerHTML('newplayer1')"></div><p></p>
+    <!-- onlick event -->
+    <button onclick="playerChoice('player1', 'rock')"><img id="player1_choice" class="player1_choice" src="rock1.png" height="100" width="100"></button>
+    <button onclick="playerChoice('player1', 'paper')"><img id="player1_choice" class="player1_choice" src="paper1.png" height="100" width="100"></button>
+    <button onclick="playerChoice('player1', 'scissors')"><img id="player1_choice" class="player1_choice" src="scissors1.png" height="100" width="100"></button>
     </div>
   <p></p>
 <div class="col">
     Player 2<p></p>
-    <button><img type="image" id="player2_choice" class="player2_choice" src="rock2.png" height="100" width="100"></button>
-    <button><img type="button" id="player2_choice" class="player2_choice" src="paper2.png" height="100" width="100"></button>
-    <button><img type="button" id="player2_choice" class="player2_choice" src="scissors2.png" height="100" width="100"></button>
+    <button onclick="playerChoice('player2', 'rock')"><img id="player2_choice" class="player2_choice" src="rock2.png" height="100" width="100"></button>
+    <button onclick="playerChoice('player2', 'paper')"><img id="player2_choice" class="player2_choice" src="paper2.png" height="100" width="100"></button>
+    <button onclick="playerChoice('player2', 'scissors')"><img id="player2_choice" class="player2_choice" src="scissors2.png" height="100" width="100"></button>
     </div>
     <p></p>
     <br>
-    Score<p></p>
-    <span id="user_score_1">0</span>:<span id="user_score_2">0</span>
-
-<!-- <div class="register">
-  Player 1:<input type="text" id="player1" class="registered-players"><br>
-  Player 2:<input type="text" id="player2" class="registered-players"><br>
-<div class="scoring">
-</div> -->
+    <h1 id="result" class="result"></h1>
+    <!-- Score<p></p> -->
+    <!-- <span id="user_score_1">0</span>:<span id="user_score_2">0</span> -->
+</div>
 
 </div>
 </body>

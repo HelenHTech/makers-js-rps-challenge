@@ -6,8 +6,8 @@ describe("Rock, Paper, Scissors", function() {
   });
 
   it("Register players", function(){
-    
-    expect().toEqual()
+    document.getElementById('newplayer1')
+    expect(this._player1).toEqual("Helen")
   });
 
 });
