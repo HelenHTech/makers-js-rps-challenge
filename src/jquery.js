@@ -1,14 +1,16 @@
-$( document ).ready(function() {
- 
+$(document).ready(function() {
   var rps = new Rps();
-
-    // $('#newplayer1').text(rps._player1);
-    // $('#newplayer2').text(rps._player2);
   
-    $('.player1_choice').on('click', function() {
-      console.log('test')
-    rps.game('rock', 'paper');
-    $('#result').text(rps._result)
+  $('.playerChoice').on('click', function(event) {
+    var player = $('.playerChoice').val();
+    var comp = rps.compChoice();
+    var winner = rps.play(player, comp);
+    // console.log("event", event.currentTarget.id)
+    console.log('event', event)
+    console.log("comp", comp)
+    console.log("winner", winner)
+    var result = $('#result').text(winner)
+    console.log("result", result)
   })
 
 });
