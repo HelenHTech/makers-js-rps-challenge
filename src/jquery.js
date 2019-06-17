@@ -1,16 +1,22 @@
 $(document).ready(function() {
   var rps = new Rps();
   
+  $('#player_name').submit(function(event) {
+    event.preventDefault();
+    var player1 = $('#player1').val();
+    rps.setPlayerName(player1);
+    $('#player1name').text("Hello " + rps.playerName + ", choose your tool..");
+  });
+
   $('.playerChoice').on('click', function(event) {
-    var player = $('.playerChoice').val();
+    var player = event.currentTarget.id
     var comp = rps.compChoice();
     var winner = rps.play(player, comp);
-    // console.log("event", event.currentTarget.id)
-    console.log('event', event)
-    console.log("comp", comp)
-    console.log("winner", winner)
-    var result = $('#result').text(winner)
-    console.log("result", result)
-  })
+    $('#result').text(winner)
+  });
 
 });
+
+// Could possibly have a test which covers the mechanics of the game.
+// It might be worth looking into a spy: https://jasmine.github.io/2.0/introduction.html 
+// or stub to be able to handle the randomness in the game

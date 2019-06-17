@@ -1,7 +1,12 @@
 function Rps() {
+  this.playerName = "";
   this._rules = { 'rock':'scissors', 'paper':'rock', 'scissors':'paper' };
   this._tools = ['rock', 'paper', 'scissors']
 }
+
+Rps.prototype.setPlayerName = function(name) {
+  return this.playerName = name;
+};
 
 Rps.prototype.play = function(playerChoice, compChoice) {
   if (playerChoice === compChoice) {
